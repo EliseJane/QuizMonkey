@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      actionBarHidden="true"
+      navigatingTo='questionPageNavigatingTo'
+      loaded='onQuestionPageLoaded'>
+  <StackLayout>
+    <Label text="You've reached the question view!"/>
+    <Label text="{{'question id: ' + question._id}}"/>
+  </StackLayout>
+</Page>

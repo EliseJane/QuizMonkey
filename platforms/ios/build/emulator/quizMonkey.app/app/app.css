@@ -1,0 +1,29 @@
+﻿/*
+In NativeScript, the app.css file is where you place CSS rules that
+you would like to apply to your entire application. Check out
+http://docs.nativescript.org/ui/styling for a full list of the CSS
+selectors and properties you can use to style UI components.
+*/
+
+.imageBackgroundContainer {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.navigationButton {
+  background-color: white;
+  border-color: black;
+  border-width: 1;
+  border-radius: 50%;
+  color: black;
+  padding: 10 20;
+  margin-bottom: 40;
+}
+
+/*
+In many cases you may want to use the NativeScript core theme instead
+of writing your own CSS rules. For a full list of class names in the theme
+refer to http://docs.nativescript.org/ui/theme.
+*/
+@import '~nativescript-theme-core/css/core.light.css';

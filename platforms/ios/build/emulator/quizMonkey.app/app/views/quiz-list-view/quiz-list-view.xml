@@ -1,0 +1,29 @@
+<!-- <Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      actionBarHidden='true'>
+      loaded='onQuizListPageLoaded'>
+  <GridLayout rows='auto, *'>
+    <Label text='Choose Your Quiz' />
+    <ListView items='{{ quizlist }}' row='1'>
+      <ListView.itemTemplate>
+        <GridLayout columns='auto, *'>
+          <Image src="{{image ? image : 'res://unknownquizimage'}}"
+                 stretch='aspectFill'/>
+          <Label text='{{name}}' col='1'/>
+        </GridLayout>
+      </ListView.itemTemplate>
+    </ListView>
+  </GridLayout>
+</Page> -->
+
+<Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      actionBarHidden='true'
+      loaded="onQuizListPageLoaded"
+      >
+  <GridLayout rows='auto, *'
+               >
+    <Label text="Choose Your Quiz"
+           />
+      <ListView items='{{ quizlist }}' row='1'>
+      </ListView>
+  </GridLayout>
+</Page>
