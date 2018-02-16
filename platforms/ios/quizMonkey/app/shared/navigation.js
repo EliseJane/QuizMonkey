@@ -6,12 +6,19 @@ exports.goToQuizList = function () {
 }
 
 exports.startupView = function () {
-  return "views/quiz-list-view/quiz-list-view";
+  return "views/welcome-view/welcome-view";
 }
 
-exports.goToQuestionView = function () {
+exports.goToQuestionView = function (quiz, index) {
   var topmost = frameModule.topmost();
   topmost.navigate({
-    moduleName: 'views/question-view/question-view'
+    moduleName: 'views/question-view/question-view',
+    context: { quiz: quiz, currentQuestionIndex: index },
+    backstackVisible: false,
+    transition: {
+      name: "slide",
+      duration: 350,
+      curve: "easeIn"
+    }
   });
 }

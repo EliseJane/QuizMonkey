@@ -2,6 +2,7 @@ var QuizListViewModel = require('../../shared/view-models/quiz-list-view-model')
 var QuizViewModel = require('../../shared/view-models/quiz-view-model');
 var observableModule = require('data/observable');
 var navigationModule = require("../../shared/navigation");
+var dialogs = require("ui/dialogs");
 
 var vm = new QuizListViewModel();
 var quizListData = new observableModule.fromObject({
@@ -25,9 +26,14 @@ exports.onSelectQuiz = function (args) {
   quiz.loadQuestions().then(function () {
     quizListData.set("isLoading", false);
     var quizLength = quiz.questions.length;
-    console.log("quizLength: " + quizLength);
+    console.log('quizLength: ' + quizLength);
+    if (quizLength > 0) {
+      navigationModule.goToQuestionView(quiz, 0);
+    } else {
+      dialogs.alert("No questions were found for this quiz. Please try another one.").
+        then(function () {
+          console.log("error loading questions. notification dialog closed.");
+        });
+    }
   });
-  if (quizLength > 0) {
-    navigationModule.goToQuestionView();
-  }
 }
