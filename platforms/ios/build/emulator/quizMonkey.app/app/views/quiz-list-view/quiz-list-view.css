@@ -1,17 +1,35 @@
-.welcome-pageContainer {
-  padding: 25px;
-  background-image: url('res://monkeybackground');
+.quizList-container {
+  background-color: silver;
 }
 
-.welcome-text {
-  font-size: 45;
+.quizList-image {
+  width: 70;
+  height: 70;
+  border-width: 1;
+  border-color: rgb(38, 30, 88);
+}
+
+.quizList-text {
+  font-size: 15;
   vertical-align: center;
-  text-align: center;
-  white-space: normal;
-  margin-bottom: 20;
-  color: rgb(49, 2, 2);
+  margin-left: 20;
+  color: white;
 }
 
-.welcome-stackLayoutContainer {
-  vertical-align: bottom;
+.quizList-itemContainer {
+  padding: 10;
+  background-color: rgb(116, 114, 114)
+}
+
+.quizList-headerText {
+  font-size: 25;
+  padding: 20;
+  margin-bottom: 2;
+  text-align: center;
+  align-self: stretch;
+  background-image: url("res://choosetopicbackground");
+}
+
+.quizList-quizAverage {
+  text-align: center;
 }

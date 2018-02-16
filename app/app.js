@@ -8,6 +8,10 @@ require("./bundle-config");
 const application = require("application");
 var navigationModule = require("./shared/navigation");
 
+if (application.ios) {
+  GMSServices.provideAPIKey("AIzaSyAXBUnElr28YZyOvxB092YMtB7C9ivpp3E");
+}
+
 application.start({ moduleName: navigationModule.startupView() });
 
 /*

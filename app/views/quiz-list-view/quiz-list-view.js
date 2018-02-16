@@ -26,7 +26,6 @@ exports.onSelectQuiz = function (args) {
   quiz.loadQuestions().then(function () {
     quizListData.set("isLoading", false);
     var quizLength = quiz.questions.length;
-    console.log('quizLength: ' + quizLength);
     if (quizLength > 0) {
       navigationModule.goToQuestionView(quiz, 0);
     } else {

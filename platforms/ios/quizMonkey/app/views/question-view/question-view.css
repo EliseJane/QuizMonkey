@@ -33,7 +33,7 @@
 }
 
 .answerItemContainer {
-  padding: 15px, 10px;
+  padding: 15px 10px;
   margin-top: 10px;
   border-width: 2px;
   border-color: rgb(43, 53, 50);
@@ -43,11 +43,13 @@
 
 .answerItemContainerShowCorrect {
   border-width: 5px;
-  padding: 12px, 7px;
+  padding: 12px 7px;
   border-color: limegreen;
+
   animation-name: correctAnswerColorAnimation;
   animation-duration: 1s;
   animation-fill-mode: forwards;
+
 }
 
 @keyframes correctAnswerColorAnimation {

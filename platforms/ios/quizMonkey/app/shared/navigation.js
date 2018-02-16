@@ -22,3 +22,17 @@ exports.goToQuestionView = function (quiz, index) {
     }
   });
 }
+
+exports.goToQuizSummaryView = function (quiz) {
+  var topmost = frameModule.topmost();
+  topmost.navigate({
+    moduleName: 'views/quiz-summary-view/quiz-summary-view',
+    bindingContext: quiz,
+    backstackVisible: false,
+    transition: {
+      name: "slideTop",
+      duration: 350,
+      curve: "easeIn"
+    }
+  });
+}

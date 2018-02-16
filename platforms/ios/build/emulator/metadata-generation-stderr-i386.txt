@@ -3,9 +3,13 @@ Target: i386-apple-darwin16.7.0
 Thread model: posix
 InstalledDir: 
 clang Invocation:
- "clang-tool" "-cc1" "-triple" "i386-apple-ios8.0.0" "-fsyntax-only" "-disable-free" "-disable-llvm-verifier" "-discard-value-names" "-main-file-name" "umbrella.h" "-mrelocation-model" "pic" "-pic-level" "2" "-mthread-model" "posix" "-mdisable-fp-elim" "-masm-verbose" "-target-cpu" "yonah" "-target-linker-version" "301.1" "-v" "-dwarf-column-info" "-debugger-tuning=lldb" "-resource-dir" "../lib/clang/4.0.0" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk" "-D" "__NATIVESCRIPT_METADATA_GENERATOR=1" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator/include" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/internal" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/internal/TKLiveSync/include" "-F/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator" "-F/Users/eljane/dev/quizMonkey/platforms/ios/internal/" "-F/Users/eljane/dev/quizMonkey/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios" "-D" "DEBUG=1" "-Wno-unknown-pragmas" "-Wno-ignored-attributes" "-Wno-nullability-completeness" "-Wno-expansion-to-defined" "-std=gnu99" "-fdebug-compilation-dir" "/Users/eljane/dev/quizMonkey/platforms/ios/internal/metadata-generator/bin" "-ferror-limit" "0" "-fmessage-length" "0" "-stack-protector" "1" "-fblocks" "-fimplicit-module-maps" "-fobjc-runtime=ios-8.0.0" "-fencode-extended-block-signature" "-fobjc-exceptions" "-fexceptions" "-fmax-type-align=16" "-fdiagnostics-show-option" "-x" "objective-c" "umbrella.h"
+ "clang-tool" "-cc1" "-triple" "i386-apple-ios8.0.0" "-fsyntax-only" "-disable-free" "-disable-llvm-verifier" "-discard-value-names" "-main-file-name" "umbrella.h" "-mrelocation-model" "pic" "-pic-level" "2" "-mthread-model" "posix" "-mdisable-fp-elim" "-masm-verbose" "-target-cpu" "yonah" "-target-linker-version" "301.1" "-v" "-dwarf-column-info" "-debugger-tuning=lldb" "-resource-dir" "../lib/clang/4.0.0" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk" "-isystem" "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public" "-isystem" "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public/GoogleMaps" "-D" "__NATIVESCRIPT_METADATA_GENERATOR=1" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator/include" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public/GoogleMaps" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/internal" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/internal/TKLiveSync/include" "-F/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator" "-F/Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Base/Frameworks" "-F/Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks" "-F/Users/eljane/dev/quizMonkey/platforms/ios/internal/" "-F/Users/eljane/dev/quizMonkey/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios" "-D" "COCOAPODS=1" "-D" "DEBUG=1" "-Wno-unknown-pragmas" "-Wno-ignored-attributes" "-Wno-nullability-completeness" "-Wno-expansion-to-defined" "-std=gnu99" "-fdebug-compilation-dir" "/Users/eljane/dev/quizMonkey/platforms/ios/internal/metadata-generator/bin" "-ferror-limit" "0" "-fmessage-length" "0" "-stack-protector" "1" "-fblocks" "-fimplicit-module-maps" "-fobjc-runtime=ios-8.0.0" "-fencode-extended-block-signature" "-fobjc-exceptions" "-fexceptions" "-fmax-type-align=16" "-fdiagnostics-show-option" "-x" "objective-c" "umbrella.h"
 
 ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator/include"
+ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public"
+ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public/GoogleMaps"
+ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public"
+ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public/GoogleMaps"
 ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/local/include"
 ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/Library/Frameworks"
 #include "..." search starts here:
@@ -13,6 +17,8 @@ ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platf
  /Users/eljane/dev/quizMonkey/platforms/ios/internal
  /Users/eljane/dev/quizMonkey/platforms/ios/internal/TKLiveSync/include
  /Users/eljane/dev/quizMonkey/platforms/ios/build/emulator (framework directory)
+ /Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Base/Frameworks (framework directory)
+ /Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks (framework directory)
  /Users/eljane/dev/quizMonkey/platforms/ios/internal (framework directory)
  /Users/eljane/dev/quizMonkey/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios (framework directory)
  ../lib/clang/4.0.0/include
@@ -24,10 +30,14 @@ Target: i386-apple-darwin16.7.0
 Thread model: posix
 InstalledDir: 
 clang Invocation:
- "objc-metadata-generator" "-cc1" "-triple" "i386-apple-ios8.0.0" "-fsyntax-only" "-disable-free" "-disable-llvm-verifier" "-discard-value-names" "-main-file-name" "umbrella.h" "-mrelocation-model" "pic" "-pic-level" "2" "-mthread-model" "posix" "-mdisable-fp-elim" "-masm-verbose" "-target-cpu" "yonah" "-target-linker-version" "301.1" "-v" "-dwarf-column-info" "-debugger-tuning=lldb" "-resource-dir" "../lib/clang/4.0.0" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk" "-D" "__NATIVESCRIPT_METADATA_GENERATOR=1" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator/include" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/internal" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/internal/TKLiveSync/include" "-F/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator" "-F/Users/eljane/dev/quizMonkey/platforms/ios/internal/" "-F/Users/eljane/dev/quizMonkey/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios" "-D" "DEBUG=1" "-Wno-unknown-pragmas" "-Wno-ignored-attributes" "-Wno-nullability-completeness" "-Wno-expansion-to-defined" "-std=gnu99" "-fdebug-compilation-dir" "/Users/eljane/dev/quizMonkey/platforms/ios/internal/metadata-generator/bin" "-ferror-limit" "0" "-fmessage-length" "0" "-stack-protector" "1" "-fblocks" "-fimplicit-module-maps" "-fobjc-runtime=ios-8.0.0" "-fencode-extended-block-signature" "-fobjc-exceptions" "-fexceptions" "-fmax-type-align=16" "-fdiagnostics-show-option" "-x" "objective-c" "umbrella.h"
+ "objc-metadata-generator" "-cc1" "-triple" "i386-apple-ios8.0.0" "-fsyntax-only" "-disable-free" "-disable-llvm-verifier" "-discard-value-names" "-main-file-name" "umbrella.h" "-mrelocation-model" "pic" "-pic-level" "2" "-mthread-model" "posix" "-mdisable-fp-elim" "-masm-verbose" "-target-cpu" "yonah" "-target-linker-version" "301.1" "-v" "-dwarf-column-info" "-debugger-tuning=lldb" "-resource-dir" "../lib/clang/4.0.0" "-isysroot" "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk" "-isystem" "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public" "-isystem" "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public/GoogleMaps" "-D" "__NATIVESCRIPT_METADATA_GENERATOR=1" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator/include" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public/GoogleMaps" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/internal" "-I" "/Users/eljane/dev/quizMonkey/platforms/ios/internal/TKLiveSync/include" "-F/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator" "-F/Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Base/Frameworks" "-F/Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks" "-F/Users/eljane/dev/quizMonkey/platforms/ios/internal/" "-F/Users/eljane/dev/quizMonkey/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios" "-D" "COCOAPODS=1" "-D" "DEBUG=1" "-Wno-unknown-pragmas" "-Wno-ignored-attributes" "-Wno-nullability-completeness" "-Wno-expansion-to-defined" "-std=gnu99" "-fdebug-compilation-dir" "/Users/eljane/dev/quizMonkey/platforms/ios/internal/metadata-generator/bin" "-ferror-limit" "0" "-fmessage-length" "0" "-stack-protector" "1" "-fblocks" "-fimplicit-module-maps" "-fobjc-runtime=ios-8.0.0" "-fencode-extended-block-signature" "-fobjc-exceptions" "-fexceptions" "-fmax-type-align=16" "-fdiagnostics-show-option" "-x" "objective-c" "umbrella.h"
 
 clang -cc1 version 4.0.0 based upon LLVM 4.0.0 default target x86_64-apple-darwin16.7.0
 ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/build/emulator/include"
+ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public"
+ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public/GoogleMaps"
+ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public"
+ignoring nonexistent directory "/Users/eljane/dev/quizMonkey/platforms/ios/Pods/Headers/Public/GoogleMaps"
 ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/local/include"
 ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/Library/Frameworks"
 #include "..." search starts here:
@@ -35,6 +45,8 @@ ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platf
  /Users/eljane/dev/quizMonkey/platforms/ios/internal
  /Users/eljane/dev/quizMonkey/platforms/ios/internal/TKLiveSync/include
  /Users/eljane/dev/quizMonkey/platforms/ios/build/emulator (framework directory)
+ /Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Base/Frameworks (framework directory)
+ /Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks (framework directory)
  /Users/eljane/dev/quizMonkey/platforms/ios/internal (framework directory)
  /Users/eljane/dev/quizMonkey/platforms/ios/../../node_modules/tns-core-modules-widgets/platforms/ios (framework directory)
  ../lib/clang/4.0.0/include
@@ -46,20 +58,30 @@ In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhon
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/CoreML.framework/Headers/MLFeatureDescription.h:41:12: error: attributes may not be specified on a category
 @interface MLFeatureDescription (MLFeatureValueConstraints)
            ^
-In file included from umbrella.h:620:
+In file included from umbrella.h:559:
+In file included from /Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Headers/GoogleMaps.h:13:
+In file included from /Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Headers/GMSMapView+Animation.h:11:
+/Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Headers/GMSMapView.h:437:1: warning: no 'assign', 'retain', or 'copy' attribute is specified - 'assign' is assumed [-Wobjc-property-no-attribute]
+@property(nonatomic, nullable) GMSCoordinateBounds *cameraTargetBounds;
+^
+/Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Headers/GMSMapView.h:437:1: warning: default property attribute 'assign' not appropriate for non-GC object [-Wobjc-property-no-attribute]
+In file included from umbrella.h:623:
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/objc/message.h:202:1: warning: incompatible redeclaration of library function 'objc_msgSend_fpret' [-Wincompatible-library-redeclaration]
 objc_msgSend_fpret(id _Nullable self, SEL _Nonnull op, ...)
 ^
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/usr/include/objc/message.h:202:1: note: 'objc_msgSend_fpret' is a builtin with type 'long double (id, SEL, ...)'
-In file included from umbrella.h:642:
+In file included from umbrella.h:645:
 In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/FileProviderUI.framework/Headers/FileProviderUI.h:11:
 In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/FileProviderUI.framework/Headers/FPUIActionExtensionViewController.h:9:
 In file included from /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/FileProvider.framework/Headers/FileProvider.h:8:
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/FileProvider.framework/Headers/NSFileProviderDomain.h:71:12: error: attributes may not be specified on a category
 @interface NSFileProviderExtension (NSFileProviderDomain)
            ^
-In file included from umbrella.h:680:
+In file included from umbrella.h:683:
 /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator11.2.sdk/System/Library/Frameworks/IOSurface.framework/Headers/IOSurfaceBase.h:46:10: fatal error: 'xpc/xpc.h' file not found
 #include <xpc/xpc.h>
          ^~~~~~~~~~~
-1 warning and 3 errors generated.
+/Users/eljane/dev/quizMonkey/platforms/ios/Pods/GoogleMaps/Maps/Frameworks/GoogleMapsCore.framework/Modules/module.modulemap:3:10: error: inferred submodules require a module with an umbrella
+  module * { export *}
+         ^
+3 warnings and 4 errors generated.

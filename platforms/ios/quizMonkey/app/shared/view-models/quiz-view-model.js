@@ -1,6 +1,7 @@
 var observableModule = require("data/observable");
 var mockQuestionsData = require("../../mockData/mockQuestionsData.json");
 var config = require("../../shared/config");
+var utilities = require("../../shared/utilities");
 
 function quizViewModel (quiz) {
   var viewModel = new observableModule.fromObject(quiz);
@@ -31,6 +32,35 @@ function quizViewModel (quiz) {
       return new Promise(resolve =>
         setTimeout(resolve, 2000)
       ).then(loadBackEndDataQuestions);
+    }
+  }
+
+  viewModel.incrementScore = function () {
+    var newScore = viewModel.currentScore + 1;
+    viewModel.currentScore = newScore;
+  }
+
+  postScore = function(finalScore) {
+    return fetch(config.apiUrl + 'quizzes/' + quiz.id, {
+      method: "PATCH",
+      ody: JSON.stringify({
+        score: finalScore,
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }).then(handleErrors);
+  }
+
+  viewModel.finalizeScore = function () {
+    var correntAnswers = viewModel.currentScore;
+    var quizLength = viewModel.questions.length;
+    var finalScore = correntAnswers / quizLength;
+    viewModel.set("finalScore", finalScore);
+    var presentableScore = utilities.convertFractionToPercentageString(finalScore);
+    viewModel.set("presentableScore", presentableScore);
+    if (!config.usMockData) {
+      postScore(finalScore);
     }
   }
 

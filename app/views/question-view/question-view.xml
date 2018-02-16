@@ -1,10 +1,11 @@
 <Page xmlns="http://schemas.nativescript.org/tns.xsd"
+      xmlns:maps="nativescript-google-maps-sdk"
       actionBarHidden="true"
       navigatingTo="questionPageNavigatingTo"
-      loaded="onQuestionPageLoaded"
-      backgroundColor="{{backgroundColor}}">
+      loaded="onQuestionPageLoaded">
   <GridLayout rows="auto, auto, auto,*"
-              class="questionContainer">
+              class="questionContainer"
+              backgroundColor="{{backgroundColor}}">
     <Label text="{{progress}}"
            rows="0"
            class="progressText"/>
@@ -21,15 +22,17 @@
               row="3"
               separatorColor="transparent"
               verticalAlignment="bottom"
-              itemTap="onSelectMultipleChoiceAnswer">
+              itemTap="onSelectMultipleChoiceAnswer"
+              backgroundColor="{{backgroundColor}}"
+              class="answerContainer"
+              id="answersListView"
+              visibility="{{question.answers ? 'visible' : 'collapsed'}}">
       <ListView.itemTemplate>
         <ContentView>
           <GridLayout columns="*, auto"
-                      class="{{showCorrect ? 'answerItemContainer answerItemContainerShowCorrect'
-                      : 'answerItemContainer'}}">
+                      class="{{showCorrect ? 'answerItemContainer answerItemContainerShowCorrect' : 'answerItemContainer'}}">
             <Label text="{{answerText}}"
-                   class="{{(isSelected && !isCorrect) ? 'answerItemText answerItemTextSelectedWrong'
-                   : 'answerItemText'}}"/>
+                   class="{{(isSelected && !isCorrect) ? 'answerItemText answerItemTextSelectedWrong' : 'answerItemText'}}"/>
             <Image col="1"
                    visibility="{{isSelected ? 'visible' : 'hidden'}}"
                    class="resultIndicator" src="{{isCorrect ? 'res://vmark' : 'res://xmark'}}"
@@ -38,5 +41,12 @@
         </ContentView>
       </ListView.itemTemplate>
     </ListView>
+    <maps:mapView visibility="{{question.answers ? 'collapsed' : 'visible'}}"
+                  row="3"
+                  latitude="{{question.mapSettings.latitude}}"
+                  longitude="{{question.mapSettings.longitude}}"
+                  zoom="{{question.mapSettings.zoom}}"
+                  mapReady="onMapReady"
+                  coordinateTapped="onCoordinateTapped"/>
   </GridLayout>
 </Page>

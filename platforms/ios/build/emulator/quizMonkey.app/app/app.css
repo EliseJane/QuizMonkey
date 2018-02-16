@@ -21,6 +21,11 @@ selectors and properties you can use to style UI components.
   margin-bottom: 40;
 }
 
+.quizImage {
+  border-radius: 50%;
+  background-size: cover;
+}
+
 /*
 In many cases you may want to use the NativeScript core theme instead
 of writing your own CSS rules. For a full list of class names in the theme
